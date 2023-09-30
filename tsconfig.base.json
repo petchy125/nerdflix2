@@ -14,7 +14,10 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@nerdflix2/shared-component": ["libs/shared/components/src/index.ts"],
+      "@nerdflix2/shared-container": ["libs/shared/container/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

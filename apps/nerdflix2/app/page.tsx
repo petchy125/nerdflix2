@@ -8,9 +8,9 @@ export default async function Index() {
    */
   return (
     <div className={styles.page}>
-      <div className="wrapper">
+      <div className="wrapper ">
         <div className="container">
-          <div id="welcome">
+          <div className="bg-indigo-500 p-2 font-mono">
             <h1>
               <span> Hello there, </span>
               Welcome nerdflix2 👋
