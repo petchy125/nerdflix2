@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import React, { useState } from "react";
+import { useState } from "react";
 
 import Card from "@nerdflix-nx-cypress/shared/container/card";
 import { Show } from "../../../types";
@@ -20,7 +20,7 @@ interface CollectionsProps {
 
 export default function Collections({
   collections,
-  searchedResults,
+  searchedResults
 }: CollectionsProps) {
   const [toggleModal, setToggleModal] = useState(false);
   const [selectedShow, setSelectedShow] = useState<Show>({} as Show);
