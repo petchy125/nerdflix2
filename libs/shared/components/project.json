@@ -41,6 +41,14 @@
           "codeCoverage": true
         }
       }
+    },
+    "component-test": {
+      "executor": "@nx/cypress:cypress",
+      "options": {
+        "cypressConfig": "libs/shared/components/cypress.config.ts",
+        "testingType": "component",
+        "skipServe": true
+      }
     }
   }
 }
