@@ -29,7 +29,7 @@ export function Group({ children }: PropsWithChildren) {
 
 export function Logo() {
   return (
-    <Link href="/">
+    <Link href="http://localhost:4202/">
       <Image
         alt="Nextflix"
         src={logo}
