@@ -25,7 +25,7 @@ const showData: Show = {
   runtime: 20000,
   status: 'online',
   tagline: 'new',
-  title: "Test Show",
+  title: "Movie Title",
   name: "Test Show",
   video: false,
   vote_average: 5,
