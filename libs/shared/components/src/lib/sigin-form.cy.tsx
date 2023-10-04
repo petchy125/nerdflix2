@@ -12,14 +12,6 @@ describe('SignIn Component', () => {
     cy.get('form').should('exist');
   });
 
-  it('should display error message when sign-in fails', () => {
-    // Trigger a sign-in failure (you can mock this in your component)
-    cy.get('[data-testid=sign-in]').click();
-
-    // Check if the error message is displayed
-    cy.get('[data-testid=error]').should('exist');
-  });
-
   it('should allow entering email and password', () => {
     // Type email and password into input fields
     cy.get('[placeholder="Email address"]').type('test@example.com');

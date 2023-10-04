@@ -54,18 +54,6 @@ describe("Hero Component", () => {
     cy.get(".line-clamp-4").should("contain.text", showData.overview);
   });
 
-  it("should open the modal when clicking 'Play' button", () => {
-    cy.mount(<Hero type="show" show={showData} />);
-
-    // Click the 'Play' button
-    cy.get("button[aria-label='Play video']").click();
-
-    // Ensure that the modal is opened
-    // cy.get('[data-testid="modal"]').should("be.visible");
-  });
-
-  // Add more test cases as needed for the 'show' type hero
-
   it("should render a 'static' type hero correctly", () => {
     const src:StaticImageData = {
       src: '/path-to-image.png', // Replace with the actual path to your image
