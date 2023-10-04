@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/image";
+import Image, { ImageLoader } from "next/image";
 import { useState } from "react";
 
 import Card from "@nerdflix-nx-cypress/shared/container/card";

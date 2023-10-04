@@ -1,5 +1,13 @@
 import Collections from './Collections';
 import { Show } from "../../../types";
+import * as NextImage from 'next/image';
+
+const OriginalNextImage = NextImage.default;
+Object.defineProperty(NextImage, 'default', {
+  configurable: true,
+  // Add `unoptimized` to any use of `next/image` in our tests
+  value: (props: any) => <OriginalNextImage {...props} unoptimized />,
+});
 
 describe('Collections Component', () => {
   it('should render collections with searched results', () => {
@@ -17,7 +25,7 @@ describe('Collections Component', () => {
     cy.mount(<Collections collections={collectionsData} searchedResults={searchedResults} />);
 
    
-    // cy.get('[data-testid="item"]').should('have.length', 2); // Assuming you have two items in total
+    cy.get('[data-testid="item"]').should('have.length', 1); // Assuming you have two items in total
   });
 
   it('should render collections without searched results', () => {
@@ -31,7 +39,7 @@ describe('Collections Component', () => {
     const searchedResults:Show[] = [];
 
     cy.mount(<Collections collections={collectionsData} searchedResults={searchedResults} />);
-    // cy.get('[data-testid="modal"]').should('not.exist');
+    cy.get('[data-testid="modal"]').should('not.exist');
   });
 
 });
